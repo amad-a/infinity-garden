@@ -10,13 +10,19 @@
 <script>
 
     var i = 0;
-     /* The text */
+    /* The text */
     var speed = 40; /* The speed/duration of the effect in milliseconds */
 
     function typeWriter() {
         var txt = `“People of past centuries believed that keeping a garden was therapeutic for individuals. Early literature
             even argued that gardening could provide a satisfying and meaningful method of recovery for those who are
-            marginalized within society” - PAT             `;
+            marginalized within society”
+                - PAT
+            
+            
+            
+
+            `;
 
         if (i < txt.length) {
             document.getElementById("typing-text").innerHTML += txt.charAt(i);
@@ -24,7 +30,7 @@
             setTimeout(typeWriter, speed);
         }
 
-        if (i === txt.length) {            
+        if (i === txt.length) {
             document.getElementById("typing-text").innerHTML = '';
             i = 0;
         }
@@ -62,7 +68,7 @@
         document.querySelector('#hover-rotate').src = document.querySelector('#hover-rotate').src.slice(0, -7) + (Math.ceil(x / 9)).toString().padStart(3, '0') + '.png';
     }
 
-    
+
 
 </script>
 
@@ -85,7 +91,7 @@
             virtual
             interface featuring interactive exhibits of flora from around the world.<br>
 
-            Amidst the rarity of physical ornamental plants that once proliferated prior to climate-induced mass dieback
+            Amidst the rarity of physical ornamental plants that once proliferated prior to climate-induced mass <a href="dieback.html">dieback</a>
             and associated restrictions on private gardens, the project aims to make the beauty of a vibrant,
             well-manicured garden accessible to individuals of all income levels and geographic locations.<br>
 
@@ -109,23 +115,21 @@
             carbon neutrality in spite of its extensive scope using heirloom technology and patented sustainability
             techniques developed by Luten Energy.<br>
 
-            It is through the tireless conservation efforts and generosity of the Luten family that this digital
-            botanical archive exists and is free and accessible to the public via any personal computing device [Amad
-            feel free to zhuzh this portion up with more tech-y language].
+            It is through the tireless conservation efforts and generosity of the Luten family that this low-bandwidth, digital
+            botanical archive exists and is free and accessible to the public via any personal computing device on the meshnet.
 
             Features of Infinity Garden include:
             <ul>
                 <li>
                     Hundreds of detailed, dynamic 21st and 20th century ornamental plant models scavenged from found
-                    software "Plant Studio"
+                    software <a href="https://www.kurtz-fernhout.com/summary_plantstudio.html">"PlantStudio"</a>
                 </li>
                 <li>
-                    Real time coordination with pre-dieback climate patterns and day night cycles from 21st century
-                    history, to
-                    accurately depict contemporary plant life growth
+                    Immersive simulated world featuring real time coordination with pre-dieback climate patterns and day night cycles from 21st century
+                    history, to accurately depict contemporary plant life growth
                 </li>
                 <li>
-                    Immersive simulation features such as
+                    Gripping narrative and gamification elements nodding to 21st century "entertainment" culture to enhance enjoyment
                 </li>
             </ul>
 

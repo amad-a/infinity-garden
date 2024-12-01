@@ -2,6 +2,16 @@
     cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png'), auto;
 }
 
+a {
+    color: rgb(0, 0, 200);
+}
+
+a:hover {
+    color: white;
+    background-color:rgb(0, 0, 200);
+    ;
+}
+
 body {
     position: absolute;
     top: 60px;
@@ -16,7 +26,7 @@ body {
 ::selection {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 200);
-  }
+}
 
 h1 {
     font-size: 60px;
@@ -31,7 +41,7 @@ p {
 }
 
 h3 {
-text-align: center;
+    text-align: center;
 }
 
 img {
@@ -88,7 +98,7 @@ h2 {
 }
 
 .heatwave {
-    background: linear-gradient( 359deg,#ffee00, #ffd736, #ff6436, #ffce36);
+    background: linear-gradient(359deg, #ffee00, #ffd736, #ff6436, #ffce36);
     background-size: 800% 800%;
     -webkit-animation: heatwave 10s ease infinite;
     -moz-animation: heatwave 10s ease infinite;
@@ -107,11 +117,11 @@ h2 {
 }
 
 .day {
-    background: linear-gradient( 180deg,#4cc0ff, #ffffff);
+    background: linear-gradient(180deg, #4cc0ff, #ffffff);
     image-rendering: pixelated;
     width: 100%;
     height: 100%;
-    background-image: url('assets/animatedsun.gif'), linear-gradient( 180deg,#4cc0ff, #ffffff);
+    background-image: url('assets/animatedsun.gif'), linear-gradient(180deg, #4cc0ff, #ffffff);
     background-repeat: no-repeat;
     -webkit-animation: heatwave 10s ease infinite;
     -moz-animation: heatwave 10s ease infinite;
@@ -119,8 +129,8 @@ h2 {
 }
 
 .nite {
-    background: linear-gradient( 359deg,#000000, #0017aa);
-    background-image: url('assets/moonface.gif'), linear-gradient( 359deg,#000000, #0017aa);
+    background: linear-gradient(359deg, #000000, #0017aa);
+    background-image: url('assets/moonface.gif'), linear-gradient(359deg, #000000, #0017aa);
     background-repeat: no-repeat;
     image-rendering: pixelated;
     width: 100%;
@@ -140,19 +150,45 @@ h2 {
 }
 
 @-webkit-keyframes heatwave {
-    0%{background-position:50% 100%}
-    50%{background-position:50% 0%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 100%
+    }
+
+    50% {
+        background-position: 50% 0%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
+
 @-moz-keyframes heatwave {
-    0%{background-position:50% 100%}
-    50%{background-position:50% 0%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 100%
+    }
+
+    50% {
+        background-position: 50% 0%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
+
 @keyframes heatwave {
-    0%{background-position:50% 100%}
-    50%{background-position:50% 0%}
-    100%{background-position:50% 0%}
+    0% {
+        background-position: 50% 100%
+    }
+
+    50% {
+        background-position: 50% 0%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
 }
 
 #hover-rotate {
