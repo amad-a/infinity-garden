@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity Garden: Coming Soon!</title>
+    <link rel="stylesheet" href="public/styles.css" />
+</head>
+<script>
+
+    const weathers = ['day', 'nite', 'heatwave', 'rain'];
+    let weatherIterator = 0;
+    const intervalID = setInterval(
+        myCallback,
+        3000
+    );
+
+    function myCallback() {
+        // TODO: make this an array
+        let frameBg = document.querySelector('#frameBG');
+        weatherIterator++;
+        if (weatherIterator > 3) weatherIterator = 0;
+        frameBg.className = weathers[weatherIterator];
+    }
+
+    function animateFlower(e) {
+        e.target.src = (e.target.src.slice(0, -4) + '.gif').replace('plant-stills', 'plant-gifs');
+    }
+
+    function pauseFlower(e) {
+        e.target.src = (e.target.src.slice(0, -4) + '.png').replace('plant-gifs', 'plant-stills');
+    }
+
+    function hoverme(e) {
+        // e = Mouse click event.
+        var rect = e.target.getBoundingClientRect();
+        var x = e.clientX - rect.left; //x position within the element.
+        var y = e.clientY - rect.top;  //y position within the element.
+
+        document.querySelector('#hover-rotate').src = document.querySelector('#hover-rotate').src.slice(0, -7) + (Math.ceil(x / 9)).toString().padStart(3, '0') + '.png';
+    }
+
+</script>
+
+<body>
+    <!-- <h1>Infinity Garden</h1>
+    <h2>Coming soon...</h2> -->
+    <h2>
+        –FOR IMMEDIATE RELEASE–
+    </h2>
+    <h3>
+        FREE VIRTUAL GARDEN AIDED BY BOTANICAL AND DIGITAL CONSERVATION EFFORTS SET FOR SPRING ‘25 RIBBON CUTTING
+        </h2>
+        <h3>
+            <i> Infinity Garden, an interactive online garden experience, is set to open its servers to the public in
+                early 2225; representatives from the Luten Family Foundation available for comment </i>
+
+        </h3>
+        <div class="main-text">
+            <i>December 1, 2224 –</i> Today, the Luten Family Foundation announced the launch of Infinity Garden, a
+            virtual
+            interface featuring interactive exhibits of flora from around the world.<br>
+
+            Amidst the rarity of physical ornamental plants that once proliferated prior to climate-induced mass dieback
+            and associated restrictions on private gardens, the project aims to make the beauty of a vibrant,
+            well-manicured garden accessible to individuals of all income levels and geographic locations.<br>
+
+            <div class="frame">
+                <div class="flowers-flex flowers-rotate">
+                    <img onmouseover="animateFlower(event)" onmouseleave="pauseFlower(event)" class="select"
+                        src="public/plant-stills/another daisy-rotate.png" />
+                    <img onmouseover="animateFlower(event)" onmouseleave="pauseFlower(event)" class="select"
+                        src="public/plant-stills/Pink daisy.png" />
+                    <img onmouseover="animateFlower(event)" onmouseleave="pauseFlower(event)" class="select"
+                        src="public/plant-stills/Lacy plant-rotate.png" />
+                    <img onmouseover="animateFlower(event)" onmouseleave="pauseFlower(event)" class="select"
+                        src="public/plant-stills/snapdragon.png" />
+                </div>
+            </div>
+            <h3>
+                <i>Variety of fully animated plant models</i>
+            </h3>
+
+            In line with the Luten family’s commitment to sustainable energy consumption, Infinity Garden maintains
+            carbon neutrality in spite of its extensive scope using heirloom technology and patented sustainability
+            techniques developed by Luten Energy.<br>
+
+            It is through the tireless conservation efforts and generosity of the Luten family that this digital
+            botanical archive exists and is free and accessible to the public via any personal computing device [Amad
+            feel free to zhuzh this portion up with more tech-y language].
+
+            Features of Infinity Garden include:
+            <ul>
+                <li>
+                    Hundreds of detailed, dynamic 21st and 20th century ornamental plant models scavenged from found
+                    software "Plant Studio"
+                </li>
+                <li>
+                    Real time coordination with pre-dieback climate patterns and day night cycles from 21st century
+                    history, to
+                    accurately depict contemporary plant life growth
+                </li>
+                <li>
+                    Immersive simulation features such as
+                </li>
+            </ul>
+
+            <div class="frame">
+                <div id="frameBG" class="day"></div>
+                <div class="grass"></div>
+                <div class="flowers-flex">
+                    <img src="public/plant-stills/maiden grass.png">
+                    <img src="public/plant-stills/gilia 061.png" />
+                </div>
+            </div>
+            <h3>
+                <i>Accurate weather and light conditions including Day, Night, Heatwave, Rain, and more</i>
+            </h3>
+
+            <i>
+                “My father’s lifelong vision of democratizing access to plant life of all varieties for a population
+                that is frequently starved of beauty and respite from our chaotic modern world has been realized with
+                the opening of Infinity Garden,”</i> said Patrick Luten, President emeritus of Luten Energy and Chief
+            Operating Officer of the Luten Family Foundation. <i>“We welcome you to Infinity Garden, and hope that our
+                digital interface will allow you to explore and nurture virtual biodiversity by exploring numerous
+                extinct and critically endangered species.”</i><br>
+
+
+            <div class="frame" id="hoverme" onmousemove="hoverme(event)">
+                <img id="hover-rotate" src="public/plant-stills/lily-of-the-valley/lily-of-the-valley 000.png" />
+            </div>
+            <h3>
+                <i>Plant Viewer™ showcasing High Definition, Three-Dimensional interactive models which capture the beauty of plantlife which once populated the earth</i>
+            </h3>
+
+
+
+
+            Notably, the garden prides itself on being labor-free in line with recent economic guidelines for privately
+            funded recreational facilities, and its staffing consists entirely of artificial intelligence, namely the
+            groundskeeper PAT, who owes his namesake to the fictional gardener from prominent 19th century author Lewis
+            Carroll’s 1865 book, Alice's Adventures in Wonderland.<br><br>
+
+            “People of past centuries believed that keeping a garden was therapeutic for individuals. Early literature
+            even argued that gardening could provide a satisfying and meaningful method of recovery for those who are
+            marginalized within society,” said PAT.<br><br>
+
+
+
+        </div>
+
+</body>
+
+</html>

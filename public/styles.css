@@ -1,0 +1,168 @@
+.flying {
+    cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png'), auto;
+}
+
+body {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: white;
+    color: rgb(0, 0, 200);
+    padding: 0px;
+    width: 642px;
+}
+
+::selection {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 200);
+  }
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    font-stretch: condensed;
+    font-style: italic;
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+h3 {
+text-align: center;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+.select {
+    border: 1px solid white;
+    transform: scale(1.25);
+}
+
+.select:hover {
+    border: 1px solid blue;
+    cursor: url('assets/watering-cursor.gif'), auto;
+}
+
+.flowers-flex {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 40px;
+    left: 0px;
+    justify-content: center;
+    width: 100%;
+    /* transform: scale(1.1) translate(30%); */
+}
+
+.main-text {
+    font-size: 18px;
+}
+
+.flowers-rotate {
+    margin-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+.frame {
+    position: relative;
+    border: 1px solid blue;
+    height: 480px;
+    width: 640px;
+    margin: 20px 0px;
+    animation: gradient-animation 5s infinite;
+}
+
+.heatwave {
+    background: linear-gradient( 359deg,#ffee00, #ffd736, #ff6436, #ffce36);
+    background-size: 800% 800%;
+    -webkit-animation: heatwave 10s ease infinite;
+    -moz-animation: heatwave 10s ease infinite;
+    animation: heatwave 10s ease infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.grass {
+    position: absolute;
+    background: repeating-linear-gradient(rgb(0, 155, 0) 0px, rgb(0, 60, 0) 20px);
+    /* background: linear-gradient(rgb(0, 155, 0), rgb(0, 60, 0)); */
+    width: 640px;
+    bottom: 0;
+    height: 100px;
+}
+
+.day {
+    background: linear-gradient( 180deg,#4cc0ff, #ffffff);
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/animatedsun.gif'), linear-gradient( 180deg,#4cc0ff, #ffffff);
+    background-repeat: no-repeat;
+    -webkit-animation: heatwave 10s ease infinite;
+    -moz-animation: heatwave 10s ease infinite;
+    animation: heatwave 10s ease infinite;
+}
+
+.nite {
+    background: linear-gradient( 359deg,#000000, #0017aa);
+    background-image: url('assets/moonface.gif'), linear-gradient( 359deg,#000000, #0017aa);
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999999;
+}
+
+.rain {
+    background-image: url('assets/rain.gif');
+    image-rendering: pixelated;
+    background-color: rgb(148, 148, 233);
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+    background-size: 8%;
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes heatwave {
+    0%{background-position:50% 100%}
+    50%{background-position:50% 0%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes heatwave {
+    0%{background-position:50% 100%}
+    50%{background-position:50% 0%}
+    100%{background-position:50% 0%}
+}
+@keyframes heatwave {
+    0%{background-position:50% 100%}
+    50%{background-position:50% 0%}
+    100%{background-position:50% 0%}
+}
+
+#hover-rotate {
+    width: 100%;
+    padding-top: 30px;
+}
+
+#hoverme {
+    background-image: url('assets/jukebox-arabia-tile-bg.gif');
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+}
+
+@media (max-width: 480px) {
+    body {
+        left: 10%;
+        transform: translate(-10%, 0%);
+    }
+}
