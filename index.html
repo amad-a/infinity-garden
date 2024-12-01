@@ -9,6 +9,27 @@
 </head>
 <script>
 
+    var i = 0;
+     /* The text */
+    var speed = 40; /* The speed/duration of the effect in milliseconds */
+
+    function typeWriter() {
+        var txt = `“People of past centuries believed that keeping a garden was therapeutic for individuals. Early literature
+            even argued that gardening could provide a satisfying and meaningful method of recovery for those who are
+            marginalized within society” - PAT             `;
+
+        if (i < txt.length) {
+            document.getElementById("typing-text").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+
+        if (i === txt.length) {            
+            document.getElementById("typing-text").innerHTML = '';
+            i = 0;
+        }
+    }
+
     const weathers = ['day', 'nite', 'heatwave', 'rain'];
     let weatherIterator = 0;
     const intervalID = setInterval(
@@ -41,9 +62,11 @@
         document.querySelector('#hover-rotate').src = document.querySelector('#hover-rotate').src.slice(0, -7) + (Math.ceil(x / 9)).toString().padStart(3, '0') + '.png';
     }
 
+    
+
 </script>
 
-<body>
+<body onload="typeWriter()">
     <!-- <h1>Infinity Garden</h1>
     <h2>Coming soon...</h2> -->
     <h2>
@@ -131,7 +154,8 @@
                 <img id="hover-rotate" src="public/plant-stills/lily-of-the-valley/lily-of-the-valley 000.png" />
             </div>
             <h3>
-                <i>Plant Viewer™ showcasing High Definition, Three-Dimensional interactive models which capture the beauty of plantlife which once populated the earth</i>
+                <i>Plant Viewer™ showcasing High Definition, Three-Dimensional interactive models which capture the
+                    beauty of plantlife which once populated the earth</i>
             </h3>
 
 
@@ -142,12 +166,13 @@
             groundskeeper PAT, who owes his namesake to the fictional gardener from prominent 19th century author Lewis
             Carroll’s 1865 book, Alice's Adventures in Wonderland.<br><br>
 
-            “People of past centuries believed that keeping a garden was therapeutic for individuals. Early literature
-            even argued that gardening could provide a satisfying and meaningful method of recovery for those who are
-            marginalized within society,” said PAT.<br><br>
 
 
 
+        </div>
+
+
+        <div class="" id="typing-text">
         </div>
 
 </body>

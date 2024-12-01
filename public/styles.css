@@ -63,6 +63,12 @@ img {
     font-size: 18px;
 }
 
+#typing-text {
+    font-family: monospace;
+    font-size: 16px;
+    height: 200px;
+}
+
 .flowers-rotate {
     margin-bottom: 50px;
 }
